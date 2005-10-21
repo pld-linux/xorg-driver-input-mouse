@@ -13,8 +13,8 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-proto-xproto-devel
-BuildRequires:	xorg-xserver-server-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-xserver-server-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
