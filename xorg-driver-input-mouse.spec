@@ -32,7 +32,8 @@ Sterownik myszy dla X.org.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	--disable-static
 
 %{__make}
 
@@ -43,7 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	drivermandir=%{_mandir}/man4
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*{.la,.a}
+rm -f $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
