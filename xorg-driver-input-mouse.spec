@@ -1,5 +1,5 @@
-Summary:	X.org mouse driver
-Summary(pl):	Sterownik myszy dla X.org
+Summary:	X.org mouse input driver
+Summary(pl):	Sterownik wej¶ciowy myszy dla X.org
 Name:		xorg-driver-input-mouse
 Version:	1.0.0.1
 Release:	0.1
@@ -18,10 +18,12 @@ BuildRequires:	xorg-xserver-server-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-X.org mouse driver.
+X.org mouse input driver. It supports most available mouse types and
+interfaces, including USB and PS/2.
 
 %description -l pl
-Sterownik myszy dla X.org.
+Sterownik wej¶ciowy myszy dla X.org. Obs³uguje wiêkszo¶æ dostêpnych
+rodzajów myszy i interfejsów, w tym USB i PS/2.
 
 %prep
 %setup -q -n xf86-input-mouse-%{version}
@@ -52,5 +54,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%attr(755,root,root) %{_libdir}/xorg/modules/input/*.so
-%{_mandir}/man4/*.4x*
+%attr(755,root,root) %{_libdir}/xorg/modules/input/mouse_drv.so
+%{_mandir}/man4/mouse.4x*
