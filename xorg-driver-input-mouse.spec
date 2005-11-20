@@ -1,20 +1,21 @@
 Summary:	X.org mouse input driver
 Summary(pl):	Sterownik wej¶ciowy myszy dla X.org
 Name:		xorg-driver-input-mouse
-Version:	1.0.0.1
+Version:	1.0.1
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/driver/xf86-input-mouse-%{version}.tar.bz2
-# Source0-md5:	fb2a899ea620b992918981e50e7ac2f8
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/driver/xf86-input-mouse-%{version}.tar.bz2
+# Source0-md5:	c2235d46120d6c5df41901326184de43
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	xorg-proto-xproto-devel
+BuildRequires:	xorg-proto-inputproto-devel
+BuildRequires:	xorg-proto-randrproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.1
-BuildRequires:	xorg-xserver-server-devel
+BuildRequires:	xorg-xserver-server-devel >= 0.99.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -53,6 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README
+%doc ChangeLog README
 %attr(755,root,root) %{_libdir}/xorg/modules/input/mouse_drv.so
 %{_mandir}/man4/mouse.4x*
