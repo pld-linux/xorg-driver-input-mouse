@@ -55,4 +55,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/xorg/modules/input/mouse_drv.so
-%{_mandir}/man4/mouse.4*
+# conflict with man-pages
+#%{_mandir}/man4/mouse.4*
