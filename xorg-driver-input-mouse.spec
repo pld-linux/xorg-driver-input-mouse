@@ -46,6 +46,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# conflict with general mouse(4) manual
+mv -f $RPM_BUILD_ROOT%{_mandir}/man4/{mouse,mouse_drv}.4
+
 rm -f $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
 
 %clean
@@ -55,5 +58,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/xorg/modules/input/mouse_drv.so
-# conflict with man-pages
-#%{_mandir}/man4/mouse.4*
+%{_mandir}/man4/mouse_drv.4*
