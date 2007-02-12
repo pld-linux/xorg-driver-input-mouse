@@ -1,5 +1,5 @@
 Summary:	X.org mouse input driver
-Summary(pl.UTF-8):   Sterownik wejściowy myszy dla X.org
+Summary(pl.UTF-8):	Sterownik wejściowy myszy dla X.org
 Name:		xorg-driver-input-mouse
 Version:	1.2.1
 Release:	1
