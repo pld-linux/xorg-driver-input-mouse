@@ -1,5 +1,5 @@
 Summary:	X.org mouse input driver
-Summary(pl):	Sterownik wej¶ciowy myszy dla X.org
+Summary(pl.UTF-8):   Sterownik wejÅ›ciowy myszy dla X.org
 Name:		xorg-driver-input-mouse
 Version:	1.2.1
 Release:	1
@@ -23,9 +23,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 X.org mouse input driver. It supports most available mouse types and
 interfaces, including USB and PS/2.
 
-%description -l pl
-Sterownik wej¶ciowy myszy dla X.org. Obs³uguje wiêkszo¶æ dostêpnych
-rodzajów myszy i interfejsów, w tym USB i PS/2.
+%description -l pl.UTF-8
+Sterownik wejÅ›ciowy myszy dla X.org. ObsÅ‚uguje wiÄ™kszoÅ›Ä‡ dostÄ™pnych
+rodzajÃ³w myszy i interfejsÃ³w, w tym USB i PS/2.
 
 %prep
 %setup -q -n xf86-input-mouse-%{version}
