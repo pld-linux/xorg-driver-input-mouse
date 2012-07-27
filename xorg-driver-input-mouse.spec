@@ -1,12 +1,12 @@
 Summary:	X.org mouse input driver
 Summary(pl.UTF-8):	Sterownik wejściowy myszy dla X.org
 Name:		xorg-driver-input-mouse
-Version:	1.7.2
+Version:	1.8.0
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-mouse-%{version}.tar.bz2
-# Source0-md5:	871c828b88e9c973f1457724b35576fb
+# Source0-md5:	126cd5dd471a38e0a13877202af6f112
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -16,9 +16,9 @@ BuildRequires:	rpmbuild(macros) >= 1.389
 BuildRequires:	xorg-proto-inputproto-devel
 BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
-BuildRequires:	xorg-xserver-server-devel >= 1.5.99.901
+BuildRequires:	xorg-xserver-server-devel >= 1.7
 %{?requires_xorg_xserver_xinput}
-Requires:	xorg-xserver-server >= 1.5.99.901
+Requires:	xorg-xserver-server >= 1.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,6 +28,17 @@ interfaces, including USB and PS/2.
 %description -l pl.UTF-8
 Sterownik wejściowy myszy dla X.org. Obsługuje większość dostępnych
 rodzajów myszy i interfejsów, w tym USB i PS/2.
+
+%package devel
+Summary:	Header file for mouse driver
+Summary(pl.UTF-8):	Plik nagłówkowy sterownika myszy
+Group:		Development/Libraries
+
+%description devel
+Header file for mouse driver.
+
+%description devel -l pl.UTF-8
+Plik nagłówkowy sterownika myszy.
 
 %prep
 %setup -q -n xf86-input-mouse-%{version}
@@ -58,3 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/xorg/modules/input/mouse_drv.so
 %{_mandir}/man4/mousedrv.4*
+
+%files devel
+%defattr(644,root,root,755)
+%{_includedir}/xorg/xf86-mouse-properties.h
