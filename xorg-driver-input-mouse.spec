@@ -1,12 +1,12 @@
 Summary:	X.org mouse input driver
 Summary(pl.UTF-8):	Sterownik wejściowy myszy dla X.org
 Name:		xorg-driver-input-mouse
-Version:	1.9.4
+Version:	1.9.5
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	https://xorg.freedesktop.org/releases/individual/driver/xf86-input-mouse-%{version}.tar.xz
-# Source0-md5:	f8a21264a4dc5b5ce192e52de4d58d5c
+# Source0-md5:	9e2c33131f804476053c618859193dd1
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
